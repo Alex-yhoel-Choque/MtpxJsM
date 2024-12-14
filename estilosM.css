@@ -1,0 +1,124 @@
+  /*Minetoipex Designers
+Commercial use prohibited, with Minetoipex terms of use */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: black;
+  padding: 10px 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+nav{background:black;padding-top:1em;padding-bottom:1em;}
+nav a{
+  text-align: center;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.menu-btn {
+  display: none;
+  background-color: #black;
+  padding: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  text-align: center;
+}
+
+.menu li {
+  position: relative;
+  text-align: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.menu li:hover>a {
+  color: #6D6D6D;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #121212;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  list-style: none;
+}
+
+.dropdown-content li {
+  width: 200px;
+}
+
+.menu li:hover>.dropdown-content {
+  display: block;
+}
+
+.dropdown-content .dropdown-content {
+  left: 100%;
+  top: 0;
+}
+
+.menu-btn.active+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: relative;
+  }
+
+  .dropdown-content .dropdown-content {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  /* Mclic */
+  .dropdown.active>.dropdown-content {
+    display: block;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+
